@@ -3,90 +3,78 @@
 
 <head>
     <!-- Required meta -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Title and metadata required by the assignment -->
+    <!-- Title and metadata -->
     <title>WDD 131 – Dynamic Web Fundamentals – Marcos de Souza Gomes</title>
     <meta name="description"
-        content="WDD 131 – Dynamic Web Fundamentals | Marcos de Souza Gomes | personal course landing page, about, resources" />
-    <meta name="author" content="Marcos de Souza Gomes" />
-    <meta name="keywords" content="WDD 131, Dynamic Web Fundamentals, web development, portfolio" />
+        content="WDD 131 – Dynamic Web Fundamentals | Marcos de Souza Gomes | personal course landing page, about, resources">
+    <meta name="author" content="Marcos de Souza Gomes">
+    <meta name="keywords" content="WDD 131, Dynamic Web Fundamentals, web development, portfolio">
 
-    <!-- Google Fonts (two fonts) -->
+    <!-- Google Fonts (with preconnects) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap"
         rel="stylesheet">
 
     <!-- Main stylesheet -->
-    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/base.css">
 
-    <!-- JavaScript that sets the year and last modified; deferred per assignment -->
+    <!-- JavaScript -->
     <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-    <!-- header with course title span (id=course-title) as required -->
-    <header class="site-header" role="banner">
-        <nav class="main-nav" role="navigation" aria-label="Main navigation">
-            <!-- links de navegação aqui -->
+    <!-- HEADER -->
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank"
+                        rel="noopener">Scripture</a></li>
+                <li><a href="#" title="Final project placeholder">Final Project</a></li>
+            </ul>
         </nav>
-        <span id="course-title" aria-label="Course title">WDD 131 – Dynamic Web Fundamentals</span>
+
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
         <p class="instructor">Marcus de Souza Gomes</p>
     </header>
 
-    <!-- Navigation (flex-based) -->
-    <nav class="main-nav" role="navigation" aria-label="Main navigation">
-        <ul>
-            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank"
-                    rel="noopener">Scripture</a></li>
-            <li><a href="#" title="Final project placeholder">Final Project</a></li>
-        </ul>
-    </nav>
-
-    <!-- Main content area -->
-    <main class="site-main" role="main">
-        <!-- Primary heading must contain your name -->
+    <!-- MAIN CONTENT -->
+    <main class="site-main">
         <h1 class="student-name">Marcus de Souza Gomes</h1>
 
-        <!-- Two grid-based cards (class="card") -->
         <div class="cards-grid">
-            <!-- Card 1: About Me -->
-            <!-- About Me card -->
+            <!-- CARD 1: ABOUT ME -->
             <section class="card">
                 <h2 class="card-title">About Me</h2>
-
                 <div class="about-inner">
                     <div class="about-text">
                         <p>Hello! My name is Marcus de Souza Gomes. I live in Porto Alegre, Brazil. I’m currently
-                            studying Software
-                            Engineering at BYU–Idaho. I love learning, building new projects, and improving every day!
-                        </p>
-
+                            studying Software Engineering at BYU–Idaho. I love learning, building new projects, and
+                            improving every day!</p>
                         <hr class="divider">
-
                         <div class="country-section">
                             <figure class="flag-figure">
                                 <img src="images/brazil-low.jpg" alt="Official Flag of Brazil">
                                 <figcaption>Official Flag of Brazil</figcaption>
                             </figure>
                             <p><strong>Brazil</strong> is a beautiful country in South America, known for its rich
-                                culture, nature,
-                                and people full of joy.</p>
+                                culture, nature, and people full of joy.</p>
                         </div>
                     </div>
-
                     <div class="portrait">
                         <img src="images/profile-low.jpg" alt="Portrait of Marcus de Souza Gomes">
                     </div>
                 </div>
             </section>
-            </section>
 
-            <!-- Card 2: Web Dev Resources -->
-            <aside class="card" aria-labelledby="resources-heading">
+            <!-- CARD 2: WEB DEV RESOURCES -->
+            <section class="card">
                 <h2 id="resources-heading" class="card-title">Web Dev Resources</h2>
                 <ul class="resources-list">
                     <li><a href="https://dev.to/" target="_blank" rel="noopener">Dev.to Community</a></li>
@@ -97,14 +85,14 @@
                     <li><a href="https://www.udemy.com/" target="_blank" rel="noopener">Udemy</a></li>
                     <li><a href="#" target="_blank" rel="noopener">Image Placeholder</a></li>
                 </ul>
-            </aside>
+            </section>
         </div>
     </main>
 
-    <!-- Footer: contains current year span and lastModified id to be filled by JS -->
-    <footer class="site-footer" role="contentinfo">
-        <p>&copy; <span id="currentyear" aria-live="polite"></span> Marcos de Souza Gomes • Brazil</p>
-        <p id="lastModified" aria-live="polite">Last Modification: </p>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; <span id="currentyear"></span> Marcos de Souza Gomes • Madagascar</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 
