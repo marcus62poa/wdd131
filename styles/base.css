@@ -4,7 +4,7 @@
    Comments are in English per assignment instructions.
 */
 
-/* Basic reset */
+/* -------------------- BASIC RESET -------------------- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,7 +23,7 @@ body {
     background-color: #f7f7f7;
 }
 
-/* Visually hidden helper for accessibility */
+/* Visually hidden helper (for accessibility) */
 .visually-hidden {
     position: absolute !important;
     height: 1px;
@@ -33,10 +33,9 @@ body {
     white-space: nowrap;
 }
 
-/* Header */
+/* -------------------- HEADER -------------------- */
 .site-header {
     background-color: #1f4f6f;
-    /* blue tone */
     color: #fff;
     padding: 18px 12px;
     text-align: center;
@@ -44,7 +43,6 @@ body {
 
 #course-title {
     display: block;
-    /* as required by assignment to center easily */
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
@@ -57,7 +55,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* Navigation (flex) */
+/* -------------------- NAVIGATION -------------------- */
 .main-nav {
     background: #333;
 }
@@ -79,7 +77,6 @@ body {
     transition: background-color 160ms ease, transform 160ms ease;
 }
 
-/* Hover effect: subtle background change, no layout shift (< 3px) */
 .main-nav a:hover,
 .main-nav a:focus {
     background-color: rgba(255, 255, 255, 0.08);
@@ -88,15 +85,13 @@ body {
     outline-offset: 2px;
 }
 
-/* Main container */
+/* -------------------- MAIN CONTENT -------------------- */
 .site-main {
     max-width: 1000px;
-    /* centered, column width similar to screenshot */
     margin: 26px auto;
     padding: 0 12px;
 }
 
-/* Student name */
 .student-name {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -105,16 +100,14 @@ body {
     color: #1f4f6f;
 }
 
-/* Grid for cards */
+/* -------------------- GRID & CARDS -------------------- */
 .cards-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    /* left big, right smaller like screenshot */
     gap: 18px;
     align-items: start;
 }
 
-/* Card style */
 .card {
     background: #fff;
     border-radius: 8px;
@@ -134,140 +127,7 @@ body {
     text-align: center;
 }
 
-/* About card layout (left) */
-/* Ajuste do layout interno (igual ao da Rubia) */
-/* Ajuste final da seção "About Me" para igualar ao exemplo da Rubia */
-.about-inner {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 16px;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.portrait {
-    flex-shrink: 0;
-    align-self: flex-start;
-}
-
-.portrait img {
-    width: 120px;
-    height: auto;
-    border-radius: 6px;
-    border: 2px solid #ddd;
-    display: block;
-}
-/* Foto (ajustada para tamanho igual ao exemplo da Rubia) */
-.portrait img {
-    width: 120px;
-    /* tamanho igual ao da Rubia */
-    height: auto;
-    border-radius: 6px;
-    border: 2px solid #ddd;
-}
-
-/* Linha divisória igual ao exemplo */
-.divider {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 12px 0;
-}
-
-/* Bandeira e legenda */
-/* Alinhamento lateral da bandeira e texto do país */
-.country-section {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    margin-top: 12px;
-}
-
-/* Bandeira ao lado esquerdo e legenda abaixo */
-.flag-figure {
-    text-align: center;
-    margin: 0;
-}
-
-.flag-figure img {
-    width: 65px;
-    /* mesmo tamanho da bandeira da Rubia */
-    height: auto;
-    border: 1px solid #ddd;
-    display: block;
-    margin: 0 auto 4px auto;
-}
-
-.flag-figure figcaption {
-    font-size: 0.8rem;
-    color: #555;
-}
-
-
-
-/* Responsivo */
-@media (max-width: 820px) {
-    .about-inner {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .portrait img {
-        width: 100px;
-        margin-top: 12px;
-    }
-
-    .flag-row {
-        justify-content: center;
-    }
-}
-/* Resources list styling */
-.resources-list {
-    list-style: disc inside;
-    margin-top: 8px;
-}
-
-.resources-list a {
-    color: #2a40b8;
-    text-decoration: underline;
-}
-
-/* Footer */
-.site-footer {
-    background: #1f4f6f;
-    color: #fff;
-    text-align: center;
-    padding: 16px;
-    margin-top: 28px;
-}
-
-.site-footer p {
-    margin: 6px 0;
-}
-
-.site-footer a {
-    color: #ffe082;
-}
-
-/* Responsive adjustments */
-@media (max-width: 820px) {
-    .cards-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-inner {
-        flex-direction: column;
-    }
-
-    .portrait img {
-        width: 120px;
-        margin: 0 auto;
-    }
-}
-/*reepeting the process*/
-/* Layout igual ao exemplo da Rubia */
+/* -------------------- ABOUT SECTION -------------------- */
 .about-inner {
     display: flex;
     justify-content: space-between;
@@ -289,9 +149,17 @@ body {
     height: auto;
     border-radius: 6px;
     border: 2px solid #ddd;
+    display: block;
 }
 
-/* Bandeira e legenda ao lado do texto */
+/* Divider line */
+.divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 12px 0;
+}
+
+/* -------------------- FLAG & COUNTRY SECTION -------------------- */
 .country-section {
     display: flex;
     align-items: flex-start;
@@ -306,6 +174,7 @@ body {
 
 .flag-figure img {
     width: 65px;
+    height: auto;
     border: 1px solid #ddd;
     display: block;
     margin: 0 auto 4px auto;
@@ -314,4 +183,49 @@ body {
 .flag-figure figcaption {
     font-size: 0.8rem;
     color: #555;
+}
+
+/* -------------------- RESOURCES LIST -------------------- */
+.resources-list {
+    list-style: disc inside;
+    margin-top: 8px;
+}
+
+.resources-list a {
+    color: #2a40b8;
+    text-decoration: underline;
+}
+
+/* -------------------- FOOTER -------------------- */
+.site-footer {
+    background: #1f4f6f;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    margin-top: 28px;
+}
+
+.site-footer p {
+    margin: 6px 0;
+}
+
+.site-footer a {
+    color: #ffe082;
+}
+
+/* -------------------- RESPONSIVE DESIGN -------------------- */
+@media (max-width: 820px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portrait img {
+        width: 100px;
+        margin-top: 12px;
+    }
 }
