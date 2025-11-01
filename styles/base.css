@@ -1,10 +1,4 @@
-/* base.css
-   Author: Marcos de Souza Gomes
-   Purpose: Styles for WDD131 Home Page assignment
-   Comments are in English per assignment instructions.
-*/
 
-/* -------------------- BASIC RESET -------------------- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,7 +17,7 @@ body {
     background-color: #f7f7f7;
 }
 
-/* Visually hidden helper (for accessibility) */
+
 .visually-hidden {
     position: absolute !important;
     height: 1px;
@@ -33,7 +27,7 @@ body {
     white-space: nowrap;
 }
 
-/* -------------------- HEADER -------------------- */
+/* ------------------- HEADER ------- */
 .site-header {
     background-color: #1f4f6f;
     color: #fff;
@@ -55,7 +49,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* -------------------- NAVIGATION -------------------- */
+
 .main-nav {
     background: #333;
 }
@@ -85,7 +79,7 @@ body {
     outline-offset: 2px;
 }
 
-/* -------------------- MAIN CONTENT -------------------- */
+
 .site-main {
     max-width: 1000px;
     margin: 26px auto;
@@ -100,7 +94,7 @@ body {
     color: #1f4f6f;
 }
 
-/* -------------------- GRID & CARDS -------------------- */
+
 .cards-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -127,7 +121,7 @@ body {
     text-align: center;
 }
 
-/* -------------------- ABOUT SECTION -------------------- */
+
 .about-inner {
     display: flex;
     justify-content: space-between;
@@ -159,7 +153,7 @@ body {
     margin: 12px 0;
 }
 
-/* -------------------- FLAG & COUNTRY SECTION -------------------- */
+
 .country-section {
     display: flex;
     align-items: flex-start;
@@ -185,7 +179,7 @@ body {
     color: #555;
 }
 
-/* -------------------- RESOURCES LIST -------------------- */
+
 .resources-list {
     list-style: disc inside;
     margin-top: 8px;
@@ -196,7 +190,7 @@ body {
     text-decoration: underline;
 }
 
-/* -------------------- FOOTER -------------------- */
+
 .site-footer {
     background: #1f4f6f;
     color: #fff;
@@ -213,7 +207,7 @@ body {
     color: #ffe082;
 }
 
-/* -------------------- RESPONSIVE DESIGN -------------------- */
+
 @media (max-width: 820px) {
     .cards-grid {
         grid-template-columns: 1fr;
