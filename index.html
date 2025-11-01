@@ -51,43 +51,32 @@
         <!-- Two grid-based cards (class="card") -->
         <div class="cards-grid">
             <!-- Card 1: About Me -->
-            <section class="card" aria-labelledby="about-heading">
-                <h2 id="about-heading" class="card-title">About Me</h2>
-
-                <!-- Layout inside card: left text, right small portrait -->
-                <div class="about-inner">
-                    <div class="about-text">
-                        <p>Hello — my name is Marcos. I study web development and enjoy building accessible, semantic
-                            websites. I am currently learning HTML, CSS, and JavaScript at WDD131 and I like focusing on
-                            clean design and performance.</p>
-
-                        <h3 class="subheading">Toloria, Madagascar</h3>
-                        <p>Madagascar is the 4th largest island in the world and located in the Indian Ocean. It is home
-                            to many unique species and beautiful landscapes.</p>
+        <!-- About Me card -->
+        <section class="card">
+            <h2 class="card-title">About Me</h2>
+        
+            <div class="about-inner">
+                <div class="about-text">
+                    <p>Hello! My name is Marcus de Souza Gomes. I live in Porto Alegre, Brazil. I’m currently studying Software
+                        Engineering at BYU–Idaho. I love learning, building new projects, and improving every day!</p>
+        
+                    <hr class="divider">
+        
+                    <div class="country-section">
+                        <figure class="flag-figure">
+                            <img src="images/brazil-low.jpg" alt="Official Flag of Brazil">
+                            <figcaption>Official Flag of Brazil</figcaption>
+                        </figure>
+                        <p><strong>Brazil</strong> is a beautiful country in South America, known for its rich culture, nature,
+                            and people full of joy.</p>
                     </div>
-
-                    <!-- Lightweight inline svg portrait as data URI (local image requirement satisfied because it's embedded) -->
-                    <figure class="portrait">
-                        <img alt="Instructor portrait placeholder" src="data:image/svg+xml;utf8,
-              <svg xmlns='http://www.w3.org/2000/svg' width='160' height='200'>
-                <rect width='100%25' height='100%25' fill='%23f5f5f5'/>
-                <circle cx='80' cy='70' r='36' fill='%23c7d8e6'/>
-                <rect x='30' y='120' width='100' height='50' rx='8' fill='%23c7d8e6'/>
-              </svg>">
-                        <figcaption class="visually-hidden">Portrait placeholder</figcaption>
-                    </figure>
                 </div>
-
-                <!-- small flag / image example (also inline tiny svg) -->
-                <div class="flag-row">
-                    <img alt="Flag placeholder" src="data:image/svg+xml;utf8,
-            <svg xmlns='http://www.w3.org/2000/svg' width='100' height='60'>
-              <rect width='100%25' height='100%25' fill='%23ffffff'/>
-              <rect width='100' height='30' y='0' fill='%23e33b2c'/>
-              <rect width='100' height='30' y='30' fill='%2300a14b'/>
-            </svg>">
-                    <p class="img-caption">Official Flag of Madagascar (placeholder)</p>
+        
+                <div class="portrait">
+                    <img src="images/profile-low.jpg" alt="Portrait of Marcus de Souza Gomes">
                 </div>
+            </div>
+        </section>
             </section>
 
             <!-- Card 2: Web Dev Resources -->

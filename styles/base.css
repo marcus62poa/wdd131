@@ -135,44 +135,94 @@ body {
 }
 
 /* About card layout (left) */
+/* Ajuste do layout interno (igual ao da Rubia) */
+/* Ajuste final da seção "About Me" para igualar ao exemplo da Rubia */
 .about-inner {
     display: flex;
-    gap: 18px;
     align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
 }
 
 .about-text {
     flex: 1;
-    color: #333;
-    font-size: 0.97rem;
+}
+
+.portrait {
+    flex-shrink: 0;
+    align-self: flex-start;
 }
 
 .portrait img {
-    width: 140px;
+    width: 120px;
     height: auto;
     border-radius: 6px;
-    border: 3px solid #eee;
+    border: 2px solid #ddd;
+    display: block;
 }
-
-/* Flag row and caption */
-.flag-row {
-    display: flex;
-    gap: 14px;
-    align-items: center;
-    margin-top: 16px;
-}
-
-.flag-row img {
-    width: 72px;
+/* Foto (ajustada para tamanho igual ao exemplo da Rubia) */
+.portrait img {
+    width: 120px;
+    /* tamanho igual ao da Rubia */
     height: auto;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+    border: 2px solid #ddd;
 }
 
-.img-caption {
-    font-size: 0.85rem;
-    color: #666;
+/* Linha divisória igual ao exemplo */
+.divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 12px 0;
 }
 
+/* Bandeira e legenda */
+/* Alinhamento lateral da bandeira e texto do país */
+.country-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+/* Bandeira ao lado esquerdo e legenda abaixo */
+.flag-figure {
+    text-align: center;
+    margin: 0;
+}
+
+.flag-figure img {
+    width: 65px;
+    /* mesmo tamanho da bandeira da Rubia */
+    height: auto;
+    border: 1px solid #ddd;
+    display: block;
+    margin: 0 auto 4px auto;
+}
+
+.flag-figure figcaption {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+
+
+/* Responsivo */
+@media (max-width: 820px) {
+    .about-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portrait img {
+        width: 100px;
+        margin-top: 12px;
+    }
+
+    .flag-row {
+        justify-content: center;
+    }
+}
 /* Resources list styling */
 .resources-list {
     list-style: disc inside;
@@ -215,4 +265,53 @@ body {
         width: 120px;
         margin: 0 auto;
     }
+}
+/*reepeting the process*/
+/* Layout igual ao exemplo da Rubia */
+.about-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.portrait {
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+.portrait img {
+    width: 120px;
+    height: auto;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+}
+
+/* Bandeira e legenda ao lado do texto */
+.country-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.flag-figure {
+    text-align: center;
+    margin: 0;
+}
+
+.flag-figure img {
+    width: 65px;
+    border: 1px solid #ddd;
+    display: block;
+    margin: 0 auto 4px auto;
+}
+
+.flag-figure figcaption {
+    font-size: 0.8rem;
+    color: #555;
 }
