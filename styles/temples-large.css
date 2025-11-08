@@ -1,15 +1,15 @@
-/* temples-large.css - applies for larger screens */
+
 @media (min-width:801px) {
     .hamburger {
         display: none
     }
 
-    /* hide hamburger on large screens */
+    
     .nav {
         display: block
     }
 
-    /* show nav on desktop */
+    
     .nav ul {
         flex-direction: row;
         gap: 1rem;
@@ -22,7 +22,7 @@
         padding: .35rem .5rem
     }
 
-    /* layout adjustments */
+    
     main {
         margin: 2rem auto;
         padding: 0 1.5rem
@@ -32,7 +32,7 @@
         font-size: 1.5rem
     }
 
-    /* grid becomes 3 columns (responsive) */
+    
     .gallery {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
@@ -43,7 +43,7 @@
     }
 }
 
-/* medium screens: 2 columns */
+
 @media (min-width:501px) and (max-width:800px) {
     .hamburger {
         display: none

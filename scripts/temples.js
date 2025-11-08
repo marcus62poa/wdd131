@@ -1,5 +1,4 @@
-// temples.js - external javascript
-// Accessibility-friendly hamburger toggle and footer dynamic text
+
 
 document.addEventListener('DOMContentLoaded', function () {
     var toggle = document.getElementById('menu-toggle');
@@ -9,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
         toggle.addEventListener('click', function () {
             var isOpen = nav.classList.toggle('open');
             toggle.setAttribute('aria-expanded', String(isOpen));
-            // change hamburger to X and vice versa without printing to console
+            
             toggle.innerHTML = isOpen ? '&#10005;' : '&#9776;';
         });
     }
 
-    // Footer dynamic content
+    
     var c = document.getElementById('copyright');
     var m = document.getElementById('last-modified');
 
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (m) {
-        // document.lastModified may return empty in some servers; fall back gracefully
+        
         var lm = document.lastModified || '';
         if (lm) {
             m.textContent = 'Last modification: ' + lm;
