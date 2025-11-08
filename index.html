@@ -2,107 +2,100 @@
 <html lang="en">
 
 <head>
-   
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>WDD 131 – Dynamic Web Fundamentals – Marcos de Souza Gomes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WDD 131 – Dynamic Web Fundamentals – Marcus de Souza Gomes</title>
     <meta name="description"
-        content="WDD 131 – Dynamic Web Fundamentals | Marcos de Souza Gomes | personal course landing page, about, resources" />
-    <meta name="author" content="Marcos de Souza Gomes" />
+        content="WDD 131 – Dynamic Web Fundamentals | Marcus de Souza Gomes | personal course landing page, about, resources" />
+    <meta name="author" content="Marcus de Souza Gomes" />
     <meta name="keywords" content="WDD 131, Dynamic Web Fundamentals, web development, portfolio" />
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
    
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap"
         rel="stylesheet">
 
-    
     <link rel="stylesheet" href="styles/base.css" />
-
-    
     <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-   
+    
     <header class="site-header" role="banner">
-        <nav class="main-nav" role="navigation" aria-label="Main navigation">
-           
-        </nav>
         <span id="course-title" aria-label="Course title">WDD 131 – Dynamic Web Fundamentals</span>
-        <p class="instructor">Marcus de Souzaa Gomes</p>
+        <p class="instructor">Marcus de Souza Gomes</p>
+
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/31?lang=eng"
+                        target="_blank" rel="noopener">Scripture</a></li>
+                <li><a href="#" title="Final project placeholder">Final Project</a></li>
+            </ul>
+        </nav>
     </header>
 
    
-    <nav class="main-nav" role="navigation" aria-label="Main navigation">
-        <ul>
-            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/31?lang=eng" target="_blank"
-                    rel="noopener">Scripture</a></li>
-            <li><a href="#" title="Final project placeholder">Final Project</a></li>
-        </ul>
-    </nav>
-
-    
     <main class="site-main" role="main">
-       
         <h1 class="student-name">Marcus de Souza Gomes</h1>
 
-        
         <div class="cards-grid">
-            <!-- Card 1: About Me -->
-            <!-- About Me card -->
-            <section class="card">
-                <h2 class="card-title">About Me</h2>
 
+            
+            <section class="card about-card">
+                <h2 class="card-title">About Me</h2>
                 <div class="about-inner">
                     <div class="about-text">
-                        <p>Hello! My name is Marcus de Souza Gomes. I live in Porto Alegre, Brazil. I’m currently
-                            studying Software
-                            Engineering at BYU–Idaho. I love learning, building new projects, and improving every day!
-                        </p>
-
-                        <hr class="divider">
-
-                        <div class="country-section">
-                            <figure class="flag-figure">
-                                <img src="images/brazil-low.jpg" alt="Official Flag of Brazil">
-                                <figcaption>Official Flag of Brazil</figcaption>
-                            </figure>
-                            <p><strong>Brazil</strong> is a beautiful country in South America, known for its rich
-                                culture, nature,
-                                and people full of joy.</p>
-                        </div>
+                        <p>Hello! My name is Marcus, and I am passionate about technology, design, and helping others
+                            learn. I am
+                            currently studying Dynamic Web Fundamentals at BYU–Idaho.</p>
+                        <p>In my free time, I enjoy learning new programming languages, exploring user interface design,
+                            and
+                            connecting ideas that can make the web a better place.</p>
                     </div>
+                    <figure class="portrait">
+                        <img src="images/profile-low.jpg" alt="Portrait of Marcus de Souza Gomes" width="120" height="150">
+                        <figcaption>Marcus de Souza Gomes</figcaption>
+                    </figure>
+                </div>
 
-                    <div class="portrait">
-                        <img src="images/profile-low.jpg" alt="Portrait of Marcus de Souza Gomes">
-                    </div>
+                <hr class="divider">
+
+                <div class="country-section">
+                    <figure class="flag-figure">
+                        <img src="images/brazil-low.jpg" alt="Flag of Brazil" width="65" height="45">
+                        <figcaption>Brazil</figcaption>
+                    </figure>
+                    <p>I am from Brazil, a country known for its warmth, creativity, and innovation. I love the blend of
+                        technology and culture here!</p>
                 </div>
             </section>
+
+            
+            <section class="card resources-card">
+                <h2 class="card-title">Web Development Resources</h2>
+                <ul class="resources-list">
+                    <li><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">MDN Web Docs</a>
+                    </li>
+                    <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+                    <li><a href="https://www.freecodecamp.org/" target="_blank" rel="noopener">freeCodeCamp</a></li>
+                    <li><a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS-Tricks</a></li>
+                    <li><a href="https://web.dev/" target="_blank" rel="noopener">Google Web.Dev</a></li>
+                </ul>
             </section>
 
-            <!-- Card 2: Web Dev Resources -->
-            <aside class="card" aria-labelledby="resources-heading">
-                <h2 id="resources-heading" class="card-title">Web Dev Resources</h2>
-                <ul class="resources-list">
-                    <li><a href="https://dev.to/" target="_blank" rel="noopener">Dev.to Community</a></li>
-                    <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener">Smashing Magazine</a>
-                    </li>
-                    <li><a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS-Tricks</a></li>
-                    <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3 Schools</a></li>
-                    <li><a href="https://www.udemy.com/" target="_blank" rel="noopener">Udemy</a></li>
-                    <li><a href="#" target="_blank" rel="noopener">Image Placeholder</a></li>
-                </ul>
-            </aside>
         </div>
     </main>
 
     
     <footer class="site-footer" role="contentinfo">
-        <p>&copy; <span id="currentyear" aria-live="polite"></span> Marcos de Souza Gomes • Brazil</p>
-        <p id="lastModified" aria-live="polite">Last Modification: </p>
+        <p>&copy; <span id="currentyear"></span> | Marcus de Souza Gomes | Brazil</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 
