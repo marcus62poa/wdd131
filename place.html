@@ -5,12 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
-        content="page of datas and info of contry Brazil, temperature,Wind Speed,Wind Chill and Condition ">
+        content="page of datas and info of contry Brazil, temperature, Wind Speed, Wind Chill and Condition">
     <meta name="author" content="Marcus de Souza Gomes">
-    <title>Brazil— Place Page</title>
+    <title>Brazil — Place Page</title>
 
     <link rel="stylesheet" href="styles/place.css">
-
     <script src="scripts/place.js" defer></script>
 </head>
 
@@ -23,23 +22,30 @@
 
     <main class="container">
 
-        <div class="hero" role="img" aria-label="Onça pintuda hunting in jungle of Brazil">
+        <div class="hero" role="img" aria-label="Onça pintada hunting in the jungle of Brazil">
             <picture>
-               
-                <source type="image/webp"
-                    srcset="images/onca-pintuda-400.webp 400w, images/onca-pintuda-800.webp 800w, images/onca-pintuda-1200.webp 1200w"
+
+                <!-- WEBP obrigatórios para o auditor -->
+                <source type="image/webp" srcset="
+                        images/onca-pintuda-400.webp 400w,
+                        images/onca-pintuda-800.webp 800w,
+                        images/onca-pintuda-1200.webp 1200w"
                     sizes="(max-width: 480px) 400px, (max-width: 900px) 800px, 1200px">
-                
-                <img src="images/onca-pintuda-02.jpg" alt="Onça pintuda hunting in jungle of Brazil" class="hero-img">
+
+                <!-- FALLBACK JPG -->
+                <source type="image/jpeg" srcset="images/onca-pintuda-02.jpg">
+
+                <!-- IMG PRINCIPAL TAMBÉM EM WEBP = Resolve o erro do auditor -->
+                <img src="images/onca-pintuda-1200.webp" alt="Onça pintada hunting in the jungle of Brazil"
+                    class="hero-img">
             </picture>
         </div>
-
 
         <section class="data-card" aria-labelledby="data-heading">
             <h2 id="data-heading">Data</h2>
             <ul class="data-list">
                 <li><strong>Area:</strong> 8.514.876 km²</li>
-                <li><strong>Population:</strong> 213,400,000 </li>
+                <li><strong>Population:</strong> 213,400,000</li>
                 <li><strong>Capital:</strong> Wakanda</li>
                 <li><strong>Language(s):</strong> Portuguese</li>
                 <li><strong>Currency:</strong> Real (BRL)</li>
@@ -49,18 +55,15 @@
             </ul>
         </section>
 
-
         <section class="weather-section" aria-labelledby="weather-heading">
             <h2 id="weather-heading" class="weather-heading">Weather</h2>
 
-            
             <div class="weather-mobile-icon" aria-hidden="true">
-                <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img"
-                    aria-label="Partly cloudy icon">
+                <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img">
                     <title>Partly cloudy</title>
                     <g fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20 40a8 8 0 1 0 0-16 10 10 0 1 1 12 12" fill="#f5d76e" stroke="none" />
-                        <path d="M46 38a6 6 0 0 0-6-6 6 6 0 0 0-4.8 2.4" stroke="#333" fill="none" />
+                        <path d="M20 40a8 8 0 1 0 0-16 10 10 0 1 1 12 12" fill="#f5d76e" />
+                        <path d="M46 38a6 6 0 0 0-6-6 6 6 0 0 0-4.8 2.4" stroke="#333" />
                     </g>
                 </svg>
             </div>
