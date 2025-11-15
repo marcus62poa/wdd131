@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brazil— Place Page</title>
+
+   
+    <link rel="stylesheet" href="styles/place.css">
+
+    
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <h1 class="place-title">Brazil</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="hero">
+           
+            <picture>
+                
+                <source media="(min-width: 768px)"
+                    srcset="https://via.placeholder.com/1200x500.webp 1200w, https://via.placeholder.com/800x333.webp 800w"
+                    type="image/webp">
+                
+                <source media="(max-width: 767px)"
+                    srcset="https://via.placeholder.com/600x400.webp 600w, https://via.placeholder.com/400x267.webp 400w"
+                    type="image/webp">
+                
+                <img src="images/onca-pintuda-02.jpg" alt="Onça pintuda hunting in jungle of Brazil" class="hero-img">
+            </picture>
+        </section>
+
+        
+        <section class="data-card" aria-labelledby="data-heading">
+            <h2 id="data-heading">Data</h2>
+            <ul class="data-list">
+                <li><strong>Area:</strong> 8.514.876 km²</li>
+                <li><strong>Population:</strong> 213,400,000 (est.)</li>
+                <li><strong>Capital:</strong> Wakanda</li>
+                <li><strong>Language(s):</strong> Portuguese</li>
+                <li><strong>Currency:</strong> Real (BRL)</li>
+                <li><strong>Time Zone:</strong> UTC-2,UTC-3,UTC-4,UTC-5 </li>
+            </ul>
+        </section>
+
+        
+        <section class="weather-section" aria-labelledby="weather-heading">
+            <h2 id="weather-heading" class="weather-heading">Weather</h2>
+
+            
+            <div class="weather-mobile-icon" aria-hidden="true">
+                
+                <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Partly cloudy icon">
+                    <title>Partly cloudy</title>
+                    <g fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 40a8 8 0 1 0 0-16 10 10 0 1 1 12 12" fill="#f5d76e" stroke="none" />
+                        <path d="M46 38a6 6 0 0 0-6-6 6 6 0 0 0-4.8 2.4" stroke="#333" fill="none" />
+                    </g>
+                </svg>
+            </div>
+
+            <div class="weather-data">
+                <p><strong>Condition:</strong> Clear sky</p>
+                <p><strong>Temperature:</strong> <span id="temp-value">32</span> °C</p>
+                <p><strong>Wind Speed:</strong> <span id="wind-value">20</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill-value">30</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; <span id="current-year"></span> — Nature & Places</p>
+            <p>Last modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
