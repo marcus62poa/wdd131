@@ -4,14 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="page of datas and info of contry Brazil, temperature,Wind Speed,Wind Chill and Condition ">
+    <meta name="description"
+        content="page of datas and info of contry Brazil, temperature,Wind Speed,Wind Chill and Condition ">
     <meta name="author" content="Marcus de Souza Gomes">
     <title>Brazil— Place Page</title>
 
-   
     <link rel="stylesheet" href="styles/place.css">
 
-    
     <script src="scripts/place.js" defer></script>
 </head>
 
@@ -23,40 +22,39 @@
     </header>
 
     <main class="container">
-        
-        <div class="hero">
-           
-            <picture>
 
-            
+        <div class="hero" role="img" aria-label="Onça pintuda hunting in jungle of Brazil">
+            <picture>
+               
+                <source type="image/webp"
+                    srcset="images/onca-pintuda-400.webp 400w, images/onca-pintuda-800.webp 800w, images/onca-pintuda-1200.webp 1200w"
+                    sizes="(max-width: 480px) 400px, (max-width: 900px) 800px, 1200px">
+                
                 <img src="images/onca-pintuda-02.jpg" alt="Onça pintuda hunting in jungle of Brazil" class="hero-img">
             </picture>
         </div>
 
-        
-    <section class="data-card" aria-labelledby="data-heading">
-        <h2 id="data-heading">Data</h2>
-        <ul class="data-list">
-            <li><strong>Area:</strong> 8.514.876 km²</li>
-            <li><strong>Population:</strong> 213,400,000 </li>
-            <li><strong>Capital:</strong> Wakanda</li>
-            <li><strong>Language(s):</strong> Portuguese</li>
-            <li><strong>Currency:</strong> Real (BRL)</li>
-            <li><strong>Time Zone:</strong> UTC-2, UTC-3, UTC-4, UTC-5</li>
-    
-            <!-- areas -->
-            <li><strong>Calling Code:</strong> +55</li>
-            <li><strong>Internet TLD:</strong> .br</li>
-        </ul>
-    </section>
 
-        
+        <section class="data-card" aria-labelledby="data-heading">
+            <h2 id="data-heading">Data</h2>
+            <ul class="data-list">
+                <li><strong>Area:</strong> 8.514.876 km²</li>
+                <li><strong>Population:</strong> 213,400,000 </li>
+                <li><strong>Capital:</strong> Wakanda</li>
+                <li><strong>Language(s):</strong> Portuguese</li>
+                <li><strong>Currency:</strong> Real (BRL)</li>
+                <li><strong>Time Zone:</strong> UTC-2, UTC-3, UTC-4, UTC-5</li>
+                <li><strong>Calling Code:</strong> +55</li>
+                <li><strong>Internet TLD:</strong> .br</li>
+            </ul>
+        </section>
+
+
         <section class="weather-section" aria-labelledby="weather-heading">
             <h2 id="weather-heading" class="weather-heading">Weather</h2>
 
             
             <div class="weather-mobile-icon" aria-hidden="true">
-                
                 <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img"
                     aria-label="Partly cloudy icon">
                     <title>Partly cloudy</title>
@@ -68,10 +66,10 @@
             </div>
 
             <div class="weather-data">
-                <p><strong>Condition:</strong> Clear sky</p>
-                <p><strong>Temperature:</strong> <span id="temp-value"> 32 </span> °C</p>
-                <p><strong>Wind Speed:</strong> <span id="wind-value"> 20 </span> km/h</p>
-                <p><strong>Wind Chill:</strong> <span id="windchill-value"> 30 </span></p>
+                <p><strong>Condition:</strong> <span id="condition">Clear sky</span></p>
+                <p><strong>Temperature:</strong> <span id="temp-value">32</span> °C</p>
+                <p><strong>Wind Speed:</strong> <span id="wind-value">20</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill-value">—</span></p>
             </div>
         </section>
     </main>

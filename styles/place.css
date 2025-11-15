@@ -1,4 +1,16 @@
+:root {
+    /* core tokens */
+    --color-primary: #c8102e;
+    --color-accent: #0b6623;
+    --text-color: #333333;
+    --bg-color: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --card-radius: 6px;
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    --font-sans: Arial, sans-serif;
+}
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +18,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #fff;
+    font-family: var(--font-sans);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.4;
 }
 
-
+/* Header */
 .site-header {
-    background: #c8102e;
+    background: var(--color-primary);
     padding: 20px 0;
     text-align: center;
     color: white;
@@ -22,47 +35,60 @@ body {
 .place-title {
     font-size: 3rem;
     font-weight: bold;
+    display: inline-block;
+    position: relative;
+    /* ensure ::after positions relative to heading */
 }
 
+/* Psuedo-element emoticon (wider view only) */
+.place-title::after {
+    content: " 🌎";
+    font-size: 1.1rem;
+    margin-left: 0.35rem;
+    display: inline-block;
+    /* hidden by default on small screens below */
+}
 
+/* Hero: we want the image to occupy full hero area even if deformed */
 .hero {
     height: 100vh;
     width: 100%;
-    background-image: url("sua-imagem.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-   
+    overflow: hidden;
+    background-color: #000;
+    /* fallback background while image loads */
+    display: block;
 }
 
+/* The <img> inside picture takes full viewport and is allowed to be deformed (object-fit: fill) */
 .hero-img {
     width: 100%;
-    height: 100%;
-
-   
-    object-fit: cover;
+    height: 100vh;
+    /* force full viewport height */
+    display: block;
+    object-fit: fill;
+    /* deformation allowed to cover entire area */
     object-position: center;
 }
 
-
+/* Container positioning */
 .container {
     position: relative;
 }
 
-
+/* Data card */
 .data-card {
     position: absolute;
     top: 20%;
     left: 5%;
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--card-bg);
     padding: 25px;
     width: 280px;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
 }
 
 .data-card h2 {
-    background: #0b6623;
+    background: var(--color-accent);
     color: white;
     padding: 10px;
     border-radius: 4px;
@@ -75,20 +101,20 @@ body {
     line-height: 1.7rem;
 }
 
-
+/* Weather */
 .weather-section {
     position: absolute;
     top: 60%;
     right: 5%;
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--card-bg);
     padding: 25px;
     width: 250px;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
 }
 
 .weather-heading {
-    background: #0b6623;
+    background: var(--color-accent);
     color: white;
     padding: 10px;
     border-radius: 4px;
@@ -96,15 +122,24 @@ body {
     font-size: 1.3rem;
 }
 
+/* Add ::after emoticon to the wider view only for the weather heading */
+.weather-heading::after {
+    content: " ☀️";
+    margin-left: 0.4rem;
+    font-size: 1rem;
+}
 
+/* The SVG is intended for mobile only; hide on larger viewports */
 .weather-mobile-icon {
     text-align: right;
     margin-bottom: 10px;
+    display: none;
+    /* default hidden; will show on mobile via media query */
 }
 
-
+/* Footer */
 .site-footer {
-    background: #c8102e;
+    background: var(--color-primary);
     color: white;
     text-align: center;
     padding: 20px 10px;
@@ -115,9 +150,17 @@ body {
     margin: 5px 0;
 }
 
+/* Accessibility: ensure contrast for focusable elements (if any later) - example */
+a:focus,
+button:focus {
+    outline: 3px solid #ffd54f;
+    outline-offset: 3px;
+}
 
+/* Responsive tweaks */
 @media (max-width: 768px) {
 
+    /* remove absolute positioning and stack cards */
     .data-card,
     .weather-section {
         position: static;
@@ -125,13 +168,33 @@ body {
         margin: 20px auto;
     }
 
-  
     .hero {
         height: auto;
     }
 
+    /* hero image on mobile: limit height to avoid extreme tall images */
     .hero-img {
         max-height: 400px;
+        height: auto;
         object-fit: cover;
+        /* on mobile prefer cover to look better */
+    }
+
+    /* show the SVG icon in mobile */
+    .weather-mobile-icon {
+        display: block;
+    }
+
+    /* hide emoticons in small screens so they only appear in wider views */
+    .place-title::after,
+    .weather-heading::after {
+        display: none;
+    }
+}
+
+/* Additional media query for very wide desktop to slightly adjust hero title size */
+@media (min-width: 1400px) {
+    .place-title {
+        font-size: 4rem;
     }
 }
