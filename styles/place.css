@@ -26,13 +26,13 @@ body {
 
 /* ===== HERO IMAGE ===== */
 .hero {
-    position: relative;
-
-    /* 🔥 Ajuste REAL da altura visível da tela */
-    height: calc(100vh - 160px);
-    /* header + footer aproximados */
-
-    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background-image: url("sua-imagem.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    /* preenche toda a área, mesmo deformando */
 }
 
 .hero-img {
