@@ -1,4 +1,4 @@
-/* ===== GENERAL RESET ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     background-color: #fff;
 }
 
-/* ===== HEADER ===== */
+
 .site-header {
     background: #c8102e;
     padding: 20px 0;
@@ -24,7 +24,7 @@ body {
     font-weight: bold;
 }
 
-/* ===== HERO IMAGE ===== */
+
 .hero {
     height: 100vh;
     width: 100%;
@@ -32,24 +32,24 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    /* preenche toda a área, mesmo deformando */
+   
 }
 
 .hero-img {
     width: 100%;
     height: 100%;
 
-    /* 🔥 Faz a imagem se ajustar sem ficar gigante */
+   
     object-fit: cover;
     object-position: center;
 }
 
-/* ===== CONTAINER OVERLAY (DATA + WEATHER) ===== */
+
 .container {
     position: relative;
 }
 
-/* ===== DATA CARD ===== */
+
 .data-card {
     position: absolute;
     top: 20%;
@@ -75,7 +75,7 @@ body {
     line-height: 1.7rem;
 }
 
-/* ===== WEATHER CARD ===== */
+
 .weather-section {
     position: absolute;
     top: 60%;
@@ -96,13 +96,13 @@ body {
     font-size: 1.3rem;
 }
 
-/* Weather icon visibility for mobile */
+
 .weather-mobile-icon {
     text-align: right;
     margin-bottom: 10px;
 }
 
-/* ===== FOOTER ===== */
+
 .site-footer {
     background: #c8102e;
     color: white;
@@ -115,7 +115,7 @@ body {
     margin: 5px 0;
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
 
     .data-card,
@@ -125,7 +125,7 @@ body {
         margin: 20px auto;
     }
 
-    /* Ajuste da imagem no mobile */
+  
     .hero {
         height: auto;
     }
