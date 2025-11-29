@@ -1,9 +1,4 @@
-/* styles.css
-   Simple, responsive, and accessible styles for the filtered temples page.
-   Comments in English as requested.
-*/
 
-/* Base and reset-like rules */
 :root {
     --max-width: 1100px;
     --gap: 1rem;
@@ -27,7 +22,7 @@ body {
     align-items: center;
 }
 
-/* Header */
+
 .site-header {
     max-width: var(--max-width);
     width: 100%;
@@ -46,7 +41,6 @@ body {
     font-size: 0.95rem;
 }
 
-/* Navigation (filters) */
 .main-nav {
     display: flex;
     gap: 0.5rem;
@@ -72,7 +66,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Temples grid */
+
 .temples-section {
     width: 100%;
     max-width: var(--max-width);
@@ -84,7 +78,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 
-/* Card */
+
 .temple-card {
     background: white;
     border-radius: 10px;
@@ -120,7 +114,7 @@ body {
     color: var(--muted);
 }
 
-/* small meta line */
+
 .card-meta {
     margin-top: auto;
     display: flex;
@@ -131,7 +125,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* Footer */
+
 .site-footer {
     max-width: var(--max-width);
     width: 100%;
@@ -142,7 +136,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* Responsive tweaks */
+
 @media (max-width: 480px) {
     .lead {
         font-size: 0.9rem;

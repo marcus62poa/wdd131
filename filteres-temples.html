@@ -6,17 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Filtered Temples - Picture Album</title>
 
-    <!-- Link to the CSS file -->
     <link rel="stylesheet" href="styles/week4.css" />
 </head>
 
 <body>
     <header class="site-header">
         <h1>Temple Picture Album</h1>
-        <p class="lead">Explore temples — filter by age and size. Images lazy-load for performance.</p>
+        <p class="lead">Home</p>
 
         <nav aria-label="Main navigation" class="main-nav">
-            <!-- Buttons used to filter displayed temples -->
+           
             <button class="filter-btn" id="homeBtn" data-filter="all" aria-pressed="true">Home</button>
             <button class="filter-btn" id="oldBtn" data-filter="old" aria-pressed="false">Old (before 1900)</button>
             <button class="filter-btn" id="newBtn" data-filter="new" aria-pressed="false">New (after 2000)</button>
@@ -29,7 +28,7 @@
 
     <main>
         <section id="temples-section" class="temples-section" aria-live="polite">
-            <!-- Temple cards will be injected here by JavaScript -->
+           
             <div id="temples-container" class="temples-container"></div>
         </section>
     </main>
@@ -39,7 +38,6 @@
         <p id="lastModified"></p>
     </footer>
 
-    <!-- Scripts -->
     <script src="scripts/week4.js"></script>
 </body>
 
