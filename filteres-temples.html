@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Filtered Temples - Picture Album</title>
+
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles/week4.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Temple Picture Album</h1>
+        <p class="lead">Explore temples — filter by age and size. Images lazy-load for performance.</p>
+
+        <nav aria-label="Main navigation" class="main-nav">
+            <!-- Buttons used to filter displayed temples -->
+            <button class="filter-btn" id="homeBtn" data-filter="all" aria-pressed="true">Home</button>
+            <button class="filter-btn" id="oldBtn" data-filter="old" aria-pressed="false">Old (before 1900)</button>
+            <button class="filter-btn" id="newBtn" data-filter="new" aria-pressed="false">New (after 2000)</button>
+            <button class="filter-btn" id="largeBtn" data-filter="large" aria-pressed="false">Large (&gt; 90,000 sq
+                ft)</button>
+            <button class="filter-btn" id="smallBtn" data-filter="small" aria-pressed="false">Small (&lt; 10,000 sq
+                ft)</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="temples-section" class="temples-section" aria-live="polite">
+            <!-- Temple cards will be injected here by JavaScript -->
+            <div id="temples-container" class="temples-container"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p id="copyright"></p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/week4.js"></script>
+</body>
+
+</html>
