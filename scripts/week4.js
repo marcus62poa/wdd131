@@ -63,21 +63,21 @@ const temples = [
     location: "Rome, Italy",
     dedicated: "2019, March, 10",
     area: 41000,
-    imageUrl: "https://churchofjesuschrist.org/imgs/rome-italy-temple.jpg"
+      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-2642-main.jpg"
   },
   {
     templeName: "Tokyo Japan",
     location: "Tokyo, Japan",
     dedicated: "1980, October, 27",
     area: 52900,
-    imageUrl: "https://churchofjesuschrist.org/imgs/tokyo-japan-temple.jpg"
+      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-26340-main.jpg"
   },
   {
     templeName: "São Paulo Brazil",
     location: "São Paulo, Brazil",
     dedicated: "1978, October, 30",
     area: 59246,
-    imageUrl: "https://churchofjesuschrist.org/imgs/sao-paulo-brazil-temple.jpg"
+      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/_temp/017-S%C3%A3o-Paulo-Brazil-Temple.jpg"
   }
 ];
 
@@ -225,7 +225,7 @@ filterButtons.forEach((btn) => {
     const modifiedEl = document.getElementById("lastModified");
 
     const year = new Date().getFullYear();
-    copyrightEl.textContent = `© ${year} ${name}. All rights reserved.`;
+    copyrightEl.textContent = ` ${year} ${name}.`;
 
  
     const lastModified = document.lastModified || "Document last modified date not available";
