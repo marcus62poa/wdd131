@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #2E8B57;
+    --secondary-color: #4A4A4A;
+    --accent-color: #FF7F50;
+    --background-color: #F7F7F7;
+    --heading-font: 'Merriweather', serif;
+    --body-font: 'Lato', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    font-family: var(--body-font);
+    margin: 0 auto;
+    max-width: 950px;
+    padding: 30px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--accent-color);
+    margin-bottom: 25px;
+    width: 95%;
+    margin-left: 0;
+}
+
+.color-table {
+    width: 85%;
+    border-collapse: collapse;
+    margin: 20px 0 30px 10px;
+}
+
+.color-table th,
+.color-table td {
+    border: 1px solid var(--secondary-color);
+    padding: 8px;
+    text-align: left;
+}
+
+.wireframe-box {
+    border: 3px solid var(--primary-color);
+    padding: 10px;
+    margin: 25px 0 25px 5px;
+    min-height: 150px;
+    background-color: #fff;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.box-item {
+    background-color: rgba(255, 127, 80, 0.2);
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid var(--accent-color);
+    font-style: italic;
+    font-size: 0.95em;
+}
+
+.grid-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.grid-section .box-item {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.lato-font {
+    font-family: var(--body-font);
+    font-weight: 400;
+}
+
+.merriweather-font {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-style: italic;
+}
+
+.logo-placeholder {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid var(--primary-color);
+    padding-top: 10px;
+    font-size: 0.8em;
+}
