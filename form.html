@@ -3,7 +3,10 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Product review form for selecting, rating, and reviewing items with full usability.">
+    <meta name="author" content="Marcus de Souza Gomes">
     <title>Product Review</title>
     <link rel="stylesheet" href="styles/form.css" />
 </head>
@@ -18,76 +21,124 @@
     <main class="page">
         <section class="form-wrap">
             <form id="reviewForm" method="get" action="review.html" novalidate>
+
+                <!-- PRODUCT SELECT -->
                 <div class="form-section">
                     <label for="productName" class="label-required">Product Name</label>
                     <select id="productName" name="productName" required aria-required="true">
-                        <option value="" disabled selected>Choose a Product ...</option>
+                        <option value="" disabled selected>Select a Product ...</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="Monitor">Monitor</option>
+                        <option value="Keyboard">Keyboard</option>
+                        <option value="Headphones">Headphones</option>
                     </select>
                 </div>
 
+                <!-- RATING -->
                 <div class="form-section">
                     <span class="label-required">Overall Rating</span>
+
                     <div class="stars-area" aria-hidden="true">
-                        <span class="stars">☆</span><span class="stars">☆ ☆</span><span class="stars">☆ ☆ ☆</span><span
-                            class="stars">☆ ☆ ☆ ☆</span><span class="stars">☆ ☆ ☆ ☆ ☆</span>
+                        <span class="stars">☆</span>
+                        <span class="stars">☆ ☆</span>
+                        <span class="stars">☆ ☆ ☆</span>
+                        <span class="stars">☆ ☆ ☆ ☆</span>
+                        <span class="stars">☆ ☆ ☆ ☆ ☆</span>
                     </div>
+
                     <div class="radios">
-                        <div class="radio"><input type="radio" id="rating1" name="rating" value="1" required /><label
-                                for="rating1" class="radio-circle"></label></div>
-                        <div class="radio"><input type="radio" id="rating2" name="rating" value="2" /><label
-                                for="rating2" class="radio-circle"></label></div>
-                        <div class="radio"><input type="radio" id="rating3" name="rating" value="3" /><label
-                                for="rating3" class="radio-circle"></label></div>
-                        <div class="radio"><input type="radio" id="rating4" name="rating" value="4" /><label
-                                for="rating4" class="radio-circle"></label></div>
-                        <div class="radio"><input type="radio" id="rating5" name="rating" value="5" /><label
-                                for="rating5" class="radio-circle"></label></div>
+                        <div class="radio">
+                            <input type="radio" id="rating1" name="rating" value="1" required />
+                            <label for="rating1" class="radio-circle"></label>
+                        </div>
+
+                        <div class="radio">
+                            <input type="radio" id="rating2" name="rating" value="2" required />
+                            <label for="rating2" class="radio-circle"></label>
+                        </div>
+
+                        <div class="radio">
+                            <input type="radio" id="rating3" name="rating" value="3" required />
+                            <label for="rating3" class="radio-circle"></label>
+                        </div>
+
+                        <div class="radio">
+                            <input type="radio" id="rating4" name="rating" value="4" required />
+                            <label for="rating4" class="radio-circle"></label>
+                        </div>
+
+                        <div class="radio">
+                            <input type="radio" id="rating5" name="rating" value="5" required />
+                            <label for="rating5" class="radio-circle"></label>
+                        </div>
                     </div>
                 </div>
 
+                <!-- DATE -->
                 <div class="form-section">
                     <label for="installDate" class="label-required">Date of Installation</label>
                     <input type="date" id="installDate" name="installDate" required aria-required="true" />
                 </div>
 
+                <!-- FEATURES -->
                 <div class="form-section features">
                     <label>Which features did you find useful in the product? <span class="hint">(Check all that
                             apply)</span></label>
-                    <div class="feature-item"><input type="checkbox" id="featureDurability" name="features"
-                            value="Durability" /><label for="featureDurability">Durability</label></div>
-                    <div class="feature-item"><input type="checkbox" id="featureEase" name="features"
-                            value="Ease of Use" /><label for="featureEase">Ease of Use</label></div>
-                    <div class="feature-item"><input type="checkbox" id="featurePerformance" name="features"
-                            value="Performance" /><label for="featurePerformance">Performance</label></div>
-                    <div class="feature-item"><input type="checkbox" id="featureDesign" name="features"
-                            value="Design" /><label for="featureDesign">Design</label></div>
+
+                    <div class="feature-item">
+                        <input type="checkbox" id="featureDurability" name="features" value="Durability" />
+                        <label for="featureDurability">Durability</label>
+                    </div>
+
+                    <div class="feature-item">
+                        <input type="checkbox" id="featureEase" name="features" value="Ease of Use" />
+                        <label for="featureEase">Ease of Use</label>
+                    </div>
+
+                    <div class="feature-item">
+                        <input type="checkbox" id="featurePerformance" name="features" value="Performance" />
+                        <label for="featurePerformance">Performance</label>
+                    </div>
+
+                    <div class="feature-item">
+                        <input type="checkbox" id="featureDesign" name="features" value="Design" />
+                        <label for="featureDesign">Design</label>
+                    </div>
                 </div>
 
+                <!-- REVIEW -->
                 <div class="form-section">
                     <label for="writtenReview">Written Review <span class="optional">(Optional)</span></label>
-                    <textarea id="writtenReview" name="writtenReview" rows="5" placeholder=""></textarea>
+                    <textarea id="writtenReview" name="writtenReview" rows="5"></textarea>
                 </div>
 
+                <!-- NAME -->
                 <div class="form-section">
                     <label for="userName">Your Name <span class="optional">(Optional)</span></label>
                     <input type="text" id="userName" name="userName" />
                 </div>
 
+                <!-- SUBMIT -->
                 <div class="form-actions">
                     <input type="submit" value="Post Review" />
                 </div>
+
             </form>
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer-inner">
-            <p>©2024 Marcus de Souza Gomes • Brazil</p>
-            <p>Last Modification: 02/26/2024 13:56:10</p>
+            <p>©️2024 Marcus de Souza Gomes • Brazil</p>
+            <p id="last-modified"></p>
         </div>
     </footer>
 
-    <script src="scripts/form.js"></script>
+    <script>
+        document.getElementById("last-modified").textContent =
+            "Last Modified: " + new Date().toLocaleString();
+    </script>
+
 </body>
 
 </html>
