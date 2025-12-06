@@ -9,7 +9,8 @@
     <meta name="author" content="Marcus de Souza Gomes">
     <title>Product Review</title>
     <link rel="stylesheet" href="styles/form.css" />
-    <link rel="script" href="scripts/form.js" />
+   
+    <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
         <section class="form-wrap">
             <form id="reviewForm" method="get" action="review.html" novalidate>
 
-                <!-- PRODUCT SELECT -->
+                
                 <div class="form-section">
                     <label for="productName" class="label-required">Product Name</label>
                     <select id="productName" name="productName" required aria-required="true">
@@ -35,7 +36,7 @@
                     </select>
                 </div>
 
-                <!-- RATING -->
+                
                 <div class="form-section">
                     <span class="label-required">Overall Rating</span>
 
@@ -75,13 +76,13 @@
                     </div>
                 </div>
 
-                <!-- DATE -->
+                
                 <div class="form-section">
                     <label for="installDate" class="label-required">Date of Installation</label>
                     <input type="date" id="installDate" name="installDate" required aria-required="true" />
                 </div>
 
-                <!-- FEATURES -->
+                
                 <div class="form-section features">
                     <label>Which features did you find useful in the product? <span class="hint">(Check all that
                             apply)</span></label>
@@ -107,19 +108,19 @@
                     </div>
                 </div>
 
-                <!-- REVIEW -->
+                
                 <div class="form-section">
                     <label for="writtenReview">Written Review <span class="optional">(Optional)</span></label>
                     <textarea id="writtenReview" name="writtenReview" rows="5"></textarea>
                 </div>
 
-                <!-- NAME -->
+                
                 <div class="form-section">
                     <label for="userName">Your Name <span class="optional">(Optional)</span></label>
                     <input type="text" id="userName" name="userName" />
                 </div>
 
-                <!-- SUBMIT -->
+               
                 <div class="form-actions">
                     <input type="submit" value="Post Review" />
                 </div>
@@ -135,11 +136,7 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById("last-modified").textContent =
-            "Last Modified: " + new Date().toLocaleString();
-    </script>
-
+ 
 </body>
 
 </html>
