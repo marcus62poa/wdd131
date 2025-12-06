@@ -1,8 +1,8 @@
-// Atualiza Last Modified
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("last-modified").textContent =
+    
         "Last Modified: " + new Date().toLocaleString();
 
+    
     const products = [
         { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
         { id: "fc-2050", name: "power laces", averagerating: 4.7 },
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
     ];
 
-    // Preenche o select com produtos
+    
     const select = document.getElementById("productName");
     products.forEach(function (p) {
         const opt = document.createElement("option");
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         select.appendChild(opt);
     });
 
-    // Validação do formulário
+    
     const form = document.getElementById("reviewForm");
     form.addEventListener("submit", function (e) {
         const ratingChecked = document.querySelector('input[name="rating"]:checked');
@@ -29,18 +29,26 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("rating5").focus();
             return false;
         }
+
         const productSelected = select.value;
         if (!productSelected) {
             e.preventDefault();
             select.focus();
             return false;
         }
+
         const dateInput = document.getElementById("installDate");
         if (!dateInput.value) {
             e.preventDefault();
             dateInput.focus();
             return false;
         }
-        return true;
+
+        
+        sessionStorage.setItem("submittedReview", "true");
+
+        return true; 
     });
+    document.getElementById("last-modified").textContent =
+        "Last Modified: " + new Date().toLocaleString();
 });
