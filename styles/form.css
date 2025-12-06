@@ -51,11 +51,11 @@ body {
 .form-wrap {
     width: 100%;
     max-width: 600px;
-    /* largura máxima em telas grandes */
+    
     min-width: 300px;
-    /* evita ficar muito estreito */
+    
     margin: 0 auto;
-    /* centraliza horizontalmente */
+    
 }
 
 form {
@@ -132,7 +132,7 @@ textarea {
     align-items: center;
     margin-top: 6px;
     flex-wrap: wrap;
-    /* para responsividade */
+    
     gap: 6px;
 }
 
@@ -194,7 +194,7 @@ input[type="submit"]:hover {
     font-size: 0.85rem;
 }
 
-/* RESPONSIVIDADE */
+
 @media (max-width: 768px) {
     .form-wrap {
         max-width: 90%;
