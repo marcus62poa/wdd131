@@ -185,3 +185,40 @@ body {
         height: 140px;
     }
 }
+#main-nav {
+    background-color: #f8f8f8;
+
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid #1e90ff;
+}
+
+#main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+
+}
+
+#main-nav ul li a {
+    text-decoration: none;
+    color: #1e90ff;
+
+    font-weight: 600;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#main-nav ul li a:hover,
+#main-nav ul li a:focus {
+    background-color: #1e90ff;
+    /* fundo azul */
+    color: #fff;
+    outline: none;
+}
+
+#main-nav ul li a:active {
+    transform: scale(0.95);
+}
